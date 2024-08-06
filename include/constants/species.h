@@ -1627,7 +1627,12 @@
 #define SPECIES_DURALUDON_GIGANTAMAX                    1520
 #define SPECIES_URSHIFU_SINGLE_STRIKE_STYLE_GIGANTAMAX  1521
 #define SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GIGANTAMAX   1522
-#define SPECIES_MIMIKYU_TOTEM_BUSTED                    1523
+#define SPECIES_NIMBEON                                 1523
+#define SPECIES_TITANEON                                1524
+#define SPECIES_TWINZ                                   1525
+#define SPECIES_GOROCHU                                 1526
+#define SPECIES_TURSHELL                                1527
+#define SPECIES_MIMIKYU_TOTEM_BUSTED                    1528
 
 #define SPECIES_EGG (SPECIES_MIMIKYU_TOTEM_BUSTED + 1)
 

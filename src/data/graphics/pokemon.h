@@ -22001,6 +22001,24 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_PECHARUNT
 
+const u32 gMonFrontPic_Nimbeon[] = INCBIN_U32("graphics/pokemon/nimbeon/anim_front.4bpp.lz");
+const u32 gMonBackPic_Nimbeon[] = INCBIN_U32("graphics/pokemon/nimbeon/back.4bpp.lz");
+const u32 gMonPalette_Nimbeon[] = INCBIN_U32("graphics/pokemon/nimbeon/normal.gbapal.lz");
+const u32 gMonShinyPalette_Nimbeon[] = INCBIN_U32("graphics/pokemon/nimbeon/shiny.gbapal.lz");
+const u8 gMonIcon_Nimbeon[] = INCBIN_U8("graphics/pokemon/nimbeon/icon.4bpp");
+#if P_FOOTPRINTS
+const u8 gMonFootprint_Nimbeon[] = INCBIN_U8("graphics/pokemon/nimbeon/footprint.1bpp");
+#endif //P_FOOTPRINTS
+
+const u32 gMonFrontPic_Titaneon[] = INCBIN_U32("graphics/pokemon/titaneon/anim_front.4bpp.lz");
+const u32 gMonBackPic_Titaneon[] = INCBIN_U32("graphics/pokemon/titaneon/back.4bpp.lz");
+const u32 gMonPalette_Titaneon[] = INCBIN_U32("graphics/pokemon/titaneon/normal.gbapal.lz");
+const u32 gMonShinyPalette_Titaneon[] = INCBIN_U32("graphics/pokemon/titaneon/shiny.gbapal.lz");
+const u8 gMonIcon_Titaneon[] = INCBIN_U8("graphics/pokemon/titaneon/icon.4bpp");
+#if P_FOOTPRINTS
+const u8 gMonFootprint_Titaneon[] = INCBIN_U8("graphics/pokemon/titaneon/footprint.1bpp");
+#endif //P_FOOTPRINTS
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
