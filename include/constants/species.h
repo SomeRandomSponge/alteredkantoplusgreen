@@ -1629,10 +1629,19 @@
 #define SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GIGANTAMAX   1522
 #define SPECIES_NIMBEON                                 1523
 #define SPECIES_TITANEON                                1524
-#define SPECIES_TWINZ                                   1525
+#define SPECIES_GHUAL                                   1525
 #define SPECIES_GOROCHU                                 1526
-#define SPECIES_TURSHELL                                1527
-#define SPECIES_MIMIKYU_TOTEM_BUSTED                    1528
+#define SPECIES_TURBANN                                 1527
+#define SPECIES_NIDORAN_JOINED                          SPECIES_NIDORAN_MALE
+#define SPECIES_NIDORAN_MALE                            1529
+#define SPECIES_NIDORAN_FEMALE                          1530
+#define SPECIES_NIDORINORINA                            SPECIES_NIDORINO_J
+#define SPECIES_NIDORINO_J                              1531
+#define SPECIES_NIDORINA_J                              1532
+#define SPECIES_NIDOKINGQUEEN                           SPECIES_NIDOKING_J
+#define SPECIES_NIDOKING_J                              1533
+#define SPECIES_NIDOQUEEN_J                             1534
+#define SPECIES_MIMIKYU_TOTEM_BUSTED                    1535
 
 #define SPECIES_EGG (SPECIES_MIMIKYU_TOTEM_BUSTED + 1)
 

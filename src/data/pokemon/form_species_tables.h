@@ -115,11 +115,11 @@ static const u16 sPikachuFormSpeciesIdTable[] = {
     SPECIES_PIKACHU_ALOLA_CAP,
     SPECIES_PIKACHU_PARTNER_CAP,
     SPECIES_PIKACHU_WORLD_CAP,
+    SPECIES_PIKACHU_PARTNER,
 #endif
 #if P_GIGANTAMAX_FORMS
     SPECIES_PIKACHU_GIGANTAMAX,
 #endif
-    SPECIES_PIKACHU_PARTNER,
     FORM_SPECIES_END,
 };
 
@@ -2181,3 +2181,21 @@ static const u16 sTerapagosFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_TERAPAGOS
+
+static const u16 sNidoranJoinedFormSpeciesIdTable[] = {
+    SPECIES_NIDORAN_MALE,
+    SPECIES_NIDORAN_FEMALE,
+    FORM_SPECIES_END,
+};
+
+static const u16 sNidorinoinaJoinedFormSpeciesIdTable[] = {
+    SPECIES_NIDORINO_J,
+    SPECIES_NIDORINA_J,
+    FORM_SPECIES_END,
+};
+
+static const u16 sNidokingqueenJoinedFormSpeciesIdTable[] = {
+    SPECIES_NIDOKING_J,
+    SPECIES_NIDOQUEEN_J,
+    FORM_SPECIES_END,
+};

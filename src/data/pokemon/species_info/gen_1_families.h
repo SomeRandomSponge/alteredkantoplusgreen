@@ -2475,6 +2475,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sPichuTeachableLearnset,
         .eggMoveLearnset = sPichuEggMoveLearnset,
         .formSpeciesIdTable = sPichuFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_PIKACHU}),
     },
 #endif //P_GEN_2_CROSS_EVOS
 
@@ -2553,7 +2554,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
         .formChangeTable = sPikachuFormChangeTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_RAICHU},
-                                {EVO_NONE, 0, SPECIES_RAICHU_ALOLAN}),
+                                {EVO_ITEM, ITEM_ELECTIRIZER, SPECIES_GOROCHU}),
     },
 
 #if P_COSPLAY_PIKACHU_FORMS
@@ -3771,7 +3772,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Sandslash"),
+        .speciesName = _("Iceslash"),
         .cryId = CRY_SANDSLASH,
         .natDexNum = NATIONAL_DEX_SANDSLASH,
         .categoryName = _("Mouse"),
@@ -8848,8 +8849,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggMoveLearnset = sSlowpokeEggMoveLearnset,
         .formSpeciesIdTable = sSlowpokeFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_SLOWBRO},
-                                {EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING},
-                                {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING}),
+                                {EVO_SPECIFIC_MON_IN_PARTY, SPECIES_TURBANN, SPECIES_SLOWKING}),
     },
 
     [SPECIES_SLOWBRO] =
@@ -15457,9 +15457,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                                 {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON},
                                 {EVO_FRIENDSHIP_DAY, 0, SPECIES_ESPEON},
                                 {EVO_FRIENDSHIP_NIGHT, 0, SPECIES_UMBREON},
-                                {EVO_SPECIFIC_MAP, MAP_PETALBURG_WOODS, SPECIES_LEAFEON},
                                 {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
-                                {EVO_SPECIFIC_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM, SPECIES_GLACEON},
                                 {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON},
                                 {EVO_FRIENDSHIP_MOVE_TYPE, TYPE_FAIRY, SPECIES_SYLVEON},
                                 {EVO_ITEM, ITEM_SHARP_BEAK, SPECIES_NIMBEON},
@@ -16135,8 +16133,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sPorygonLevelUpLearnset,
         .teachableLearnset = sPorygonTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_TRADE_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2},
-                                {EVO_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2}),
     },
 
 #if P_GEN_2_CROSS_EVOS
