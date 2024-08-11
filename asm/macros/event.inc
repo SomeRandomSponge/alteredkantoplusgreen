@@ -2106,6 +2106,28 @@
 	.4byte \func
 	.endm
 
+    @ example_usage:
+	@ 	createfieldmugshot MUGSHOT_TEST, EMOTE_NORMAL
+	@ 	msgbox test
+	@ 	removefieldmugshot
+	@ 	createfieldmugshot MUGSHOT_TEST, EMOTE_ALT
+	@ 	msgbox test2
+	@ 	removefieldmugshot
+
+	@ spawn a mugshot in the overworld at a specific coordinate
+	@ NOTE: this macro uses VAR_TEMP_E and VAR_TEMP_F as its parameter
+	@ so be careful if you use them in your script too!
+	.macro createfieldmugshot id:req, emote=0
+	setorcopyvar VAR_TEMP_E, \id
+	setorcopyvar VAR_TEMP_F, \emote
+	callnative CreateFieldMugshot
+	.endm
+
+	@ destroys a mugshot in the overworld, if there is one
+	.macro removefieldmugshot
+	callnative RemoveFieldMugshot
+	.endm
+
 	@ Set up a totem boost for the next battle.
 	@ 'battler' is the position of the mon you want to gain a boost. see B_POSITION_xx in include/constants/battle.h.
 	@ The rest of the arguments are the stat change values to each stat.
