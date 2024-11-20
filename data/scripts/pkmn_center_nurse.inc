@@ -2,15 +2,42 @@ Common_EventScript_PkmnCenterNurse::
 	lock
 	faceplayer
 	setvar VAR_0x8004, 0
+	gettime
 	specialvar VAR_RESULT, CountPlayerTrainerStars
 	goto_if_eq VAR_RESULT, 4, EventScript_PkmnCenterNurse_GoldCard
-	msgbox gText_WouldYouLikeToRestYourPkmn, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
-	goto_if_eq VAR_RESULT, NO, EventScript_PkmnCenterNurse_Goodbye
+	switch VAR_0x8003
+	case 0, EventScript_PkmnCenterNurse_NurseIntro_Morning
+	case 1, EventScript_PkmnCenterNurse_NurseIntro_Day
+	case 2, EventScript_PkmnCenterNurse_NurseIntro_Evening
+	case 3, EventScript_PkmnCenterNurse_NurseIntro_Night
 	end
 
+EventScript_PkmnCenterNurse_NurseIntro_Morning::
+	msgbox gText_NurseIntro_Morning, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
+	message gText_PleaseMakeUseOf
+	return
+
+EventScript_PkmnCenterNurse_NurseIntro_Day::
+	msgbox gText_NurseIntro_Day, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
+	message gText_PleaseMakeUseOf
+	return
+
+EventScript_PkmnCenterNurse_NurseIntro_Evening::
+	msgbox gText_NurseIntro_Evening, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
+	message gText_TakeCareStaySafeOutThere
+	return
+
+EventScript_PkmnCenterNurse_NurseIntro_Night::
+	msgbox gText_NurseIntro_Night, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
+	message gText_TakeCareStaySafeOutThere
+	return
+
 EventScript_PkmnCenterNurse_Goodbye::
-	message gText_WeHopeToSeeYouAgain
+	message gText_PleaseMakeUseOf
 	return
 
 @ VAR_0x8004 is 1 when player has Gold Card; jumps are identical
@@ -59,7 +86,7 @@ EventScript_PkmnCenterNurse_ReturnPkmn::
 	waitmessage
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
-	message gText_WeHopeToSeeYouAgain
+	message gText_PleaseMakeUseOf
 	return
 
 EventScript_PkmnCenterNurse_ReturnPkmn2::
@@ -67,7 +94,7 @@ EventScript_PkmnCenterNurse_ReturnPkmn2::
 	waitmessage
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
-	message gText_WeHopeToSeeYouAgain2
+	message gText_PlsComeAgain
 	return
 
 EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom::
@@ -78,7 +105,7 @@ EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom::
 	waitmessage
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
-	message gText_WeHopeToSeeYouAgain
+	message gText_PleaseMakeUseOf
 	return
 
 EventScript_PkmnCenterNurse_CheckPokerus::
@@ -103,13 +130,39 @@ EventScript_PkmnCenterNurse_GoldCard::
 	waitmovement 0
 	msgbox gText_NoticesGoldCard, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_GoldCardHealPkmn
-	message gText_WeHopeToSeeYouAgain2
+	message gText_PlsComeAgain
 	return
 
 EventScript_PkmnCenterNurse_AskForUsual::
-	msgbox gText_YouWantTheUsual, MSGBOX_YESNO
+	switch VAR_0x8003
+	case 0, EventScript_PkmnCenterNurse_AskForUsual_Morning
+	case 1, EventScript_PkmnCenterNurse_AskForUsual_Day
+	case 2, EventScript_PkmnCenterNurse_AskForUsual_Evening
+	case 3, EventScript_PkmnCenterNurse_AskForUsual_Night
+	end
+
+EventScript_PkmnCenterNurse_AskForUsual_Morning::
+	msgbox gText_YouWantTheUsual_Morning, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_GoldCardHealPkmn
-	message gText_WeHopeToSeeYouAgain2
+	message gText_PlsComeAgain
+	return
+
+EventScript_PkmnCenterNurse_AskForUsual_Day::
+	msgbox gText_YouWantTheUsual_Day, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_GoldCardHealPkmn
+	message gText_PlsComeAgain
+	return
+
+EventScript_PkmnCenterNurse_AskForUsual_Evening::
+	msgbox gText_YouWantTheUsual_Evening, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_GoldCardHealPkmn
+	message gText_TakeCareStaySafeOutTherePlayer
+	return
+
+EventScript_PkmnCenterNurse_AskForUsual_Night::
+	msgbox gText_YouWantTheUsual_Night, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_GoldCardHealPkmn
+	message gText_TakeCareStaySafeOutTherePlayer
 	return
 
 EventScript_PkmnCenterNurse_GoldCardHealPkmn::

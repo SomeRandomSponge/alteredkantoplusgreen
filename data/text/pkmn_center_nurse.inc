@@ -1,8 +1,21 @@
-gText_WouldYouLikeToRestYourPkmn::
-	.string "Hello, and welcome to\n"
-	.string "the POKéMON CENTER.\p"
-	.string "We restore your tired POKéMON\n"
-	.string "to full health.\p"
+gText_NurseIntro_Morning::
+	.string "Good morning!\n"
+	.string "Welcome to our POKéMON CENTER.\p"
+	.string "Would you like to rest your POKéMON?$"
+
+gText_NurseIntro_Day::
+	.string "Good day!\n"
+	.string "Welcome to our POKéMON CENTER.\p"
+	.string "Would you like to rest your POKéMON?$"
+
+gText_NurseIntro_Evening::
+	.string "Good evening!\n"
+	.string "Welcome to our POKéMON CENTER.\p"
+	.string "Would you like to rest your POKéMON?$"
+
+gText_NurseIntro_Night::
+	.string "Good evening! You're out late.\n"
+	.string "Welcome to our POKéMON CENTER.\p"
 	.string "Would you like to rest your POKéMON?$"
 
 gText_IllTakeYourPkmn::
@@ -14,8 +27,15 @@ gText_RestoredPkmnToFullHealth::
 	.string "We've restored your POKéMON\n"
 	.string "to full health.$"
 
-gText_WeHopeToSeeYouAgain::
-	.string "We hope to see you again!$"
+gText_PleaseMakeUseOf::
+	.string "Please make use of our services\n"
+	.string "again anytime!$"
+
+gText_PlsComeAgain::
+	.string "Please come again!$"
+
+gText_TakeCareStaySafeOutThere::
+	.string "Take care and stay safe out there!$"
 
 gText_WelcomeCutShort::
 	.string "Hello, and welcome to\n"
@@ -36,8 +56,23 @@ gText_NoticesGoldCard::
 	.string "Okay, {PLAYER}, please allow me\n"
 	.string "the honor of resting your POKéMON!$"
 
-gText_YouWantTheUsual::
-	.string "I'm delighted to see you, {PLAYER}!\n"
+gText_YouWantTheUsual_Morning::
+	.string "I hope you're having\n"
+	.string "a great morning, {PLAYER}!\p"
+	.string "You want the usual, am I right?$"
+
+gText_YouWantTheUsual_Day::
+	.string "I hope you're having\n"
+	.string "a great day, {PLAYER}!\p"
+	.string "You want the usual, am I right?$"
+
+gText_YouWantTheUsual_Evening::
+	.string "I hope you're having\n"
+	.string "a great evening, {PLAYER}!\p"
+	.string "You want the usual, am I right?$"
+
+gText_YouWantTheUsual_Night::
+	.string "How's your night going, {PLAYER}?\n"
 	.string "You want the usual, am I right?$"
 
 gText_IllTakeYourPkmn2::
@@ -47,5 +82,6 @@ gText_IllTakeYourPkmn2::
 gText_ThankYouForWaiting::
 	.string "Thank you for waiting.$"
 
-gText_WeHopeToSeeYouAgain2::
-	.string "We hope to see you again!$"
+gText_TakeCareStaySafeOutTherePlayer::
+	.string "Take care and stay safe out there,\n"
+	.string "{PLAYER}!$"
