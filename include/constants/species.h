@@ -1649,7 +1649,8 @@
 #define SPECIES_NIDOKINGQUEEN                           SPECIES_NIDOKING_J
 #define SPECIES_NIDOKING_J                              1533
 #define SPECIES_NIDOQUEEN_J                             1534
-#define SPECIES_MIMIKYU_TOTEM_BUSTED                    1535
+#define SPECIES_MIMIKYU_BUSTED_TOTEM                    1535
+#define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
 
 #define SPECIES_EGG                                     (SPECIES_MIMIKYU_BUSTED_TOTEM + 1)
 
